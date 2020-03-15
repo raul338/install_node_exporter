@@ -18,5 +18,5 @@ if [ -f $folder/node_exporter ]; then
 fi
 ln "$folder/node_exporter-${version}.linux-amd64/node_exporter" $folder/node_exporter
 rm $tmpfile
-supervisorctl restart node_exporter
+supervisorctl update node_exporter
 

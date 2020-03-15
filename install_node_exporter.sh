@@ -11,7 +11,7 @@ if [ -f $tmpfile ]; then
 		rm $tmpfile
 	fi
 fi
-wget -O $tmpfile "https://github.com/prometheus/node_exporter/releases/download/v${version}/node_exporter-${version}.linux-amd64.tar.gz"
+wget -q --show-progress -O $tmpfile "https://github.com/prometheus/node_exporter/releases/download/v${version}/node_exporter-${version}.linux-amd64.tar.gz"
 tar -xf $tmpfile -C $folder
 if [ -f $folder/node_exporter ]; then
 	rm $folder/node_exporter

@@ -5,11 +5,15 @@ To edit path or node_exporter version, update files accordingly
 Check node_exporter.conf, It includes an optional command line wich disables some metrics that I don't use in grafana
 
 ```sh
-sudo apt update
-sudo apt install supervisor
-
 # To run it online
+# Ubuntu/debian
+sudo apt update && sudo apt install supervisor
 sudo wget -qO /etc/supervisor/conf.d/node_exporter.conf https://raw.githubusercontent.com/raul338/install_node_exporter/master/node_exporter.conf
+
+# Centos/RHEL
+sudo yum install supervisor wget
+sudo wget -qO /etc/supervisord.d/node_exporter.conf https://raw.githubusercontent.com/raul338/install_node_exporter/master/node_exporter.conf
+
 sudo supervisorctl update
 sudo wget -qO- https://raw.githubusercontent.com/raul338/install_node_exporter/master/install_node_exporter.sh | sudo bash
 

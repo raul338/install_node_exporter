@@ -15,7 +15,7 @@ sudo yum install supervisor wget
 sudo curl -Lo /etc/supervisord.d/node_exporter.conf https://raw.githubusercontent.com/raul338/install_node_exporter/master/node_exporter.conf
 
 sudo supervisorctl update
-sudo curl -Lo 0https://raw.githubusercontent.com/raul338/install_node_exporter/master/install_node_exporter.sh | sudo bash
+sudo curl -Lo https://raw.githubusercontent.com/raul338/install_node_exporter/master/install_node_exporter.sh | sudo bash
 
 # If you cloned/downloaded this repo:
 sudo cp node_exporter.conf /etc/supervisor/conf.d

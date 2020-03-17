@@ -2,6 +2,7 @@
 Simple script to install `node_exporter` in a vps to `/srv/node_exporter` and activate it using `supervisor`
 
 To edit path or node_exporter version, update files accordingly
+Check node_exporter.conf, It includes an optional command line wich disables some metrics that I don't use in grafana
 
 ```sh
 sudo apt update

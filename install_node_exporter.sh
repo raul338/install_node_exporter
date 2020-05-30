@@ -1,5 +1,5 @@
 #!/bin/bash
-version=0.18.1
+version=1.0.0
 folder=/srv/node_exporter
 
 tmpfile="$folder/node_exporter.tar.gz"

@@ -19,3 +19,4 @@ fi
 ln "$folder/node_exporter-${version}.linux-amd64/node_exporter" $folder/node_exporter
 rm $tmpfile
 supervisorctl update node_exporter
+supervisorctl restart node_exporter
